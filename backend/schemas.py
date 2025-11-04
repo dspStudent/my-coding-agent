@@ -35,3 +35,15 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     email: str | None = None
+
+
+class Resume(BaseModel):
+    id: int
+    filename: str
+    storage_url: str
+    parsed_json: str
+    created_at: datetime
+
+    model_config = ConfigDict(
+        from_attributes=True,
+    )

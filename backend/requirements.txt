@@ -9,3 +9,5 @@ pydantic-settings
 psycopg2-binary
 email-validator
 python-multipart
+pyresparser
+spacy
