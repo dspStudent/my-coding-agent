@@ -54,7 +54,9 @@ def upgrade() -> None:
             {'key': 'company_site', 'type': 'job_discovery', 'name': 'Company Sites', 'description': 'Scrape company career pages', 'is_paid': 0, 'requires_keys': 0, 'enabled': 1},
             {'key': 'hunter', 'type': 'contact_discovery', 'name': 'Hunter.io', 'description': 'Email finder API', 'is_paid': 1, 'requires_keys': 1, 'enabled': 1},
             {'key': 'site_scrape_contacts', 'type': 'contact_discovery', 'name': 'Site Contact Scraper', 'description': 'Find emails on site/job page', 'is_paid': 0, 'requires_keys': 0, 'enabled': 1},
-            {'key': 'neverbounce', 'type': 'validation', 'name': 'NeverBounce', 'description': 'Email validation', 'is_paid': 1, 'requires_keys': 1, 'enabled': 1}
+            {'key': 'neverbounce', 'type': 'validation', 'name': 'NeverBounce', 'description': 'Email validation', 'is_paid': 1, 'requires_keys': 1, 'enabled': 1},
+            {'key': 'openai', 'type': 'parsing', 'name': 'OpenAI', 'description': 'Resume parsing using OpenAI API', 'is_paid': 1, 'requires_keys': 1, 'enabled': 1},
+            {'key': 'gemini', 'type': 'parsing', 'name': 'Google Gemini', 'description': 'Resume parsing using Google Gemini API', 'is_paid': 1, 'requires_keys': 1, 'enabled': 1}
         ]
     )
 

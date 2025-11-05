@@ -11,3 +11,5 @@ email-validator
 python-multipart
 pyresparser
 spacy
+openai
+pypdf
