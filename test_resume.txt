@@ -1,0 +1,2 @@
+This is a test resume for John Doe.
+Skills: Python, FastAPI, React

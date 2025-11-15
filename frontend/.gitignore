@@ -1,0 +1,6 @@
+# See https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser
+
+.env*.local
+
+# Log files
+*.log

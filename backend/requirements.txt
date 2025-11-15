@@ -13,3 +13,7 @@ pyresparser
 spacy
 openai
 pypdf
+beautifulsoup4
+google-search-results
+transformers
+torch

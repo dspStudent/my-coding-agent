@@ -1,10 +1,9 @@
-# TODO: The server is currently crashing with an "Internal Server Error" when running with the full authentication code.
-# The issue seems to be related to the application startup, as no logs are being generated.
-# This needs to be investigated and fixed.
-
+import backend.path_fix
 from fastapi import FastAPI
 from backend.api.v1.api import api_router
+from backend.core.config import settings
+import backend.logs
 
-app = FastAPI()
+app = FastAPI(title=settings.PROJECT_NAME, version=settings.PROJECT_VERSION)
 
 app.include_router(api_router, prefix="/api/v1")

@@ -15,14 +15,10 @@ import logging
 
 @router.post("/register", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    try:
-        db_user = crud.get_user_by_email(db, email=user.email)
-        if db_user:
-            raise HTTPException(status_code=400, detail="Email already registered")
-        return auth_service.create_user(db=db, user=user)
-    except Exception as e:
-        logging.error(e)
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+    db_user = crud.get_user_by_email(db, email=user.email)
+    if db_user:
+        raise HTTPException(status_code=400, detail="Email already registered")
+    return auth_service.create_user(db=db, user=user)
 
 
 @router.post("/login", response_model=schemas.Token)

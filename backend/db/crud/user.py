@@ -14,16 +14,3 @@ def create_user(db: Session, user: schemas.UserCreate):
     db.commit()
     db.refresh(db_user)
     return db_user
-
-
-def get_user_data_source_by_user_id_and_type(db: Session, user_id: int, type: str):
-    return (
-        db.query(models.UserDataSourceConfig)
-        .join(models.DataSource)
-        .filter(
-            models.UserDataSourceConfig.user_id == user_id,
-            models.DataSource.type == type,
-            models.UserDataSourceConfig.is_enabled == 1,
-        )
-        .first()
-    )
